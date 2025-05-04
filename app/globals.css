@@ -75,15 +75,20 @@ html {
   }
 }
 
+/* Add this to your utilities layer */
 @layer utilities {
-  .gradient {
-    @apply bg-gradient-to-br from-blue-600 to-purple-600;
-  }
   .gradient-title {
-    @apply gradient font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text;
+    @apply bg-gradient-to-br from-blue-600 to-purple-600 
+           font-extrabold tracking-tighter text-transparent bg-clip-text;
+
+    /* Ensure BlurText spans inherit the gradient */
+    & .inline-block {
+      @apply text-transparent bg-clip-text;
+      background: inherit;
+      display: inline; /* Maintains proper line breaks */
+    }
   }
 }
-
 .hero-image-wrapper {
   perspective: 1000px;
 }
