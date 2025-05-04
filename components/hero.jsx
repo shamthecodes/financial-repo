@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import BlurText from "@/reactbit/BlurText/BlurText";
 
 const HeroSection = () => {
   const imageRef = useRef(null);
@@ -31,31 +30,9 @@ const HeroSection = () => {
     <div className="pb-20 px-4">
       <div className="container mx-auto text-center">
         <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 gradient-title">
-          <BlurText
-            text="Manage Your Finances"
-            animateBy="words"
-            delay={190}
-            className="inline-block"
-            animationFrom={{ filter: "blur(10px)", opacity: 0, y: 20 }}
-            animationTo={[
-              { filter: "blur(5px)", opacity: 0.6, y: 5 },
-              { filter: "blur(0px)", opacity: 1, y: 0 },
-            ]}
-            stepDuration={0.4}
-          />
+          Manage Your Finances
           <br />
-          <BlurText
-            text="with Intelligence"
-            animateBy="words"
-            delay={190} // Slightly delayed for staggered effect
-            className="inline-block"
-            animationFrom={{ filter: "blur(10px)", opacity: 0, y: 20 }}
-            animationTo={[
-              { filter: "blur(5px)", opacity: 0.6, y: 5 },
-              { filter: "blur(0px)", opacity: 1, y: 0 },
-            ]}
-            stepDuration={0.4}
-          />
+          with Intelligence
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           An AI-powered financial management platform that helps you track,
